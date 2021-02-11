@@ -23,12 +23,11 @@
 
 #include "Eigen/Core"
 #include "Eigen/Geometry"
+
 #include "cartographer/common/make_unique.h"
 #include "cartographer/common/port.h"
 #include "cartographer_ros/msg_conversion.h"
-#include "cartographer_ros_msgs/SubmapQuery.h"
-#include "eigen_conversions/eigen_msg.h"
-#include "ros/ros.h"
+// #include "eigen_conversions/eigen_msg.h"
 
 namespace cartographer_rviz {
 

@@ -19,13 +19,16 @@
 
 #include "Eigen/Core"
 #include "Eigen/Geometry"
+
 #include "OgreManualObject.h"
 #include "OgreMaterial.h"
+#include "OgreMaterialManager.h"
 #include "OgreQuaternion.h"
 #include "OgreSceneManager.h"
 #include "OgreSceneNode.h"
 #include "OgreTexture.h"
 #include "OgreVector3.h"
+
 #include "cartographer/io/submap_painter.h"
 #include "cartographer/mapping/id.h"
 

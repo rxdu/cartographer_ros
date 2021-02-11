@@ -168,16 +168,19 @@ install(TARGETS
   RUNTIME DESTINATION bin)
 
 # # Install source headers.
-# file(GLOB_RECURSE HDRS "*.h")
-# foreach(HDR ${HDRS})
-#   file(RELATIVE_PATH REL_FIL ${PROJECT_SOURCE_DIR} ${HDR})
-#   get_filename_component(INSTALL_DIR ${REL_FIL} DIRECTORY)
-#   install(
-#     FILES
-#       ${HDR}
-#     DESTINATION
-#       include/${INSTALL_DIR}
-#   )
-# endforeach()
+file(GLOB_RECURSE HDRS "*.h")
+foreach(HDR ${HDRS})
+  file(RELATIVE_PATH REL_FIL ${PROJECT_SOURCE_DIR} ${HDR})
+  get_filename_component(INSTALL_DIR ${REL_FIL} DIRECTORY)
+  install(
+    FILES
+      ${HDR}
+    DESTINATION
+      include/${PROJECT_NAME}/
+  )
+endforeach()
+
+ament_export_include_directories(include)
+ament_export_libraries(${PROJECT_NAME})
 
 ament_package()
